@@ -1,0 +1,55 @@
+---
+alwaysApply: true
+---
+
+## General Rules
+
+- Use semantic HTML to improve structure and accessibility.
+- Write modular, reusable, and concise code, avoiding duplication through iteration and modularization.
+- Optimize performance by minimizing unnecessary computations and using memoization (e.g., `React.memo`, `useMemo`, `useCallback`) where appropriate.
+- Ensure accessibility by following ARIA guidelines and supporting keyboard navigation.
+- Use descriptive variable names with auxiliary verbs (e.g., `isLoading`, `hasError`) and camelCase for variables/functions.
+- Use kebab-case for filenames (e.g., `my-component.tsx`).
+- Implement proper error handling, prioritizing edge cases with early returns and guard clauses.
+- Always use `for...of` loops instead of `forEach` for iteration; prefer `map`, `filter`, `reduce` for transformations.
+- Follow Biome toolchain rules (https://biomejs.dev/) for linting and formatting consistency.
+- Prefer inline exports for components, functions, and types (e.g., `export const MyComponent = ...`).
+- Use aliases for imports always (see `[tsconfig.json](mdc:tsconfig.json)`); prefer `@/*` for absolute paths.
+- Always fix Biome errors.
+
+## Additional Best Practices
+
+- Use `async/await` for asynchronous operations instead of `.then`.
+- Optimize Web Vitals (LCP, CLS, FID) with lazy loading, WebP images, and minimal global styles.
+- Handle errors at the start of functions with early returns, placing the happy path last; log errors and show user-friendly messages.
+- Sanitize user inputs to prevent XSS; use `dangerouslySetInnerHTML` only with sanitized content.
+
+### Type Safety Rules
+
+- Ensure type safety in tests.
+- Import parameter types explicitly using path aliases (e.g., `import type { MethodParams } from '@/features/...'`).
+- Remove unused imports immediately to prevent linter errors.
+
+### Test Structure Rules (Vitest)
+
+- Use `describe` to group related tests.
+- Use `it` or `test` for individual test cases.
+- Use `expect` for assertions.
+- Include edge case tests: empty arrays, zero values, missing data scenarios.
+- Test both single items and multiple items in arrays where applicable.
+- Use explicit assertions, never snapshot testing.
+- Each test should contain a case for each return closure, nil check for parameters, empty string for string parameters.
+- Each test for a function containing comparison should be enriched with cases generated with boundary values test design technique.
+- When generating cases include a positive case for a boundary value and the closest value outside boundaries for the negative case.
+
+### Code Quality Rules
+
+- Fix linter errors immediately.
+- Use descriptive test names that explain the scenario being tested.
+- Group related tests in describe blocks with clear naming.
+
+### Error Prevention Rules
+
+- Always run tests after creating new test files to catch type errors early.
+- Check that mock data structure matches type definitions exactly.
+- Test edge cases first to ensure robust error handling.

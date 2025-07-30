@@ -1,0 +1,17 @@
+---
+description: "How to add new shadcn/ui components"
+---
+
+# Adding New shadcn/ui Components
+
+To add new components from [shadcn/ui](https://ui.shadcn.com/), use the `pnpx shadcn@latest add <component-name>` command. This will add the component's source code to `src/components/ui` and install any necessary dependencies.
+
+## Example
+
+To add a `button` component, run the following command in your terminal:
+
+```bash
+pnpx shadcn@latest add button
+```
+
+This will create `[src/components/ui/button.tsx](mdc:src/components/ui/button.tsx)`.

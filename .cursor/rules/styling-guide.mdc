@@ -1,0 +1,25 @@
+---
+globs: "*.ts,*.tsx"
+---
+
+# Styling Guide
+
+This project uses [Tailwind CSS](https://tailwindcss.com/) for styling and [shadcn/ui](https://ui.shadcn.com/) for the component library.
+
+## Combining CSS Classes
+
+When you need to conditionally apply CSS classes, use the `cn` utility function from `[src/lib/utils.ts](mdc:src/lib/utils.ts)`. This function is a combination of `clsx` and `tailwind-merge` and helps keep class names clean and readable.
+
+### Example
+
+```tsx
+import { cn } from "@/lib/utils"
+
+function MyComponent({ className, isActive }) {
+  return (
+    <div className={cn("p-4", { "bg-blue-500": isActive }, className)}>
+      Hello, world!
+    </div>
+  )
+}
+```

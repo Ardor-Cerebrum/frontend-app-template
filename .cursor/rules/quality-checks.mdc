@@ -1,0 +1,10 @@
+---
+alwaysApply: true
+---
+
+# Quality Checks
+
+After every change in agent mode, you must run the following commands to ensure code quality and type safety:
+
+1.  **`pnpm check`**: This command runs Biome to check for linting and formatting issues.
+2.  **`pnpm exec tsc --noEmit`**: This command runs the TypeScript compiler to check for type errors.

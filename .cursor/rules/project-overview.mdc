@@ -1,0 +1,27 @@
+---
+alwaysApply: true
+---
+
+# Project Overview
+
+This is a web application built with [React](https://react.dev/) and [Vite](https://vitejs.dev/).
+
+## Key Technologies
+
+- **UI Framework**: [React](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Routing**: [@tanstack/react-router](https://tanstack.com/router)
+- **Data Fetching**: [@tanstack/react-query](https://tanstack.com/query)
+- **Forms**: [@tanstack/react-form](https://tanstack.com/form)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Linting/Formatting**: [Biome](https://biomejs.dev/)
+
+## Project Structure
+
+- `src/main.tsx`: The application entry point.
+- `src/routes`: Contains the route definitions for the application.
+- `src/components`: Contains reusable React components.
+  - `src/components/ui`: Contains `shadcn/ui` components.
+- `src/lib`: Contains utility functions.
+- `package.json`: Lists project dependencies and scripts.
