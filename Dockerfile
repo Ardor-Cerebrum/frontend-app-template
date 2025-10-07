@@ -95,7 +95,7 @@ COPY nginx.conf /etc/nginx/
 
 # Runtime configuration
 USER nginx
-EXPOSE 80
+EXPOSE 3000
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
 
 # Container health monitoring
