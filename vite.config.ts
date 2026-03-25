@@ -15,7 +15,7 @@ export default defineConfig({
     tailwindcss(),
   ],
   server: {
-    allowedHosts: ['.ardor.cloud', '.ardor.build'],
+    allowedHosts: ['.ardor.build'],
   },
   test: {
     globals: true,
