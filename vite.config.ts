@@ -14,6 +14,9 @@ export default defineConfig({
     viteReact(),
     tailwindcss(),
   ],
+  server: {
+    allowedHosts: ['.ardor.build'],
+  },
   test: {
     globals: true,
     environment: 'jsdom',
